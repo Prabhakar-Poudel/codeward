@@ -1,0 +1,17 @@
+{
+  "@@locale": "en",
+  "appTitle": "codeward",
+  "@appTitle": {
+    "description": "secure key management"
+  },
+  "searchPlaceholder": "Search...",
+  "settings": "Settings",
+  "theme": "Theme",
+  "dark": "Dark",
+  "light": "Light",
+  "system": "System",
+  "clipboardCopied": "Copied to clipboard",
+  "addAccount": "Add Account",
+  "add": "Add",
+  "cancel": "Cancel"
+}
