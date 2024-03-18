@@ -6,7 +6,7 @@ import 'body_view.dart';
 import 'add_account.dart';
 
 class MainView extends StatefulWidget {
-  MainView({Key? key}) : super(key: key);
+  MainView({super.key});
 
   static const routeName = '/';
 
