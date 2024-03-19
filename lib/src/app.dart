@@ -28,8 +28,12 @@ class MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: const [
-            Locale('en', ''),
+            Locale('de'),
+            Locale('en'),
+            Locale('it'),
+            Locale('ru'),
           ],
+          locale: settingsController.locale,
           onGenerateTitle: (BuildContext context) =>
               AppLocalizations.of(context)!.appTitle,
           theme: ThemeData(),

@@ -12,4 +12,15 @@ class SettingsService {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('themeMode', theme.index);
   }
+
+  Future<Locale> appLocale() async {
+    final prefs = await SharedPreferences.getInstance();
+    final appLocale = prefs.getString('locale') ?? 'en';
+    return Locale(appLocale);
+  }
+
+  Future<void> setAppLocale(Locale locale) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('locale', locale.languageCode);
+  }
 }

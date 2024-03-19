@@ -13,6 +13,9 @@ class ThemeModeDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownButton<ThemeMode>(
+      isExpanded: true,
+      padding: const EdgeInsets.only(left: 16, right: 16),
+      icon: const Icon(Icons.brightness_4_sharp),
       value: selectedThemeMode,
       onChanged: onThemeModeChanged,
       items: [
