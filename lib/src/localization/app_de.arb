@@ -1,0 +1,17 @@
+{
+  "@@locale": "de",
+  "appTitle": "codeward",
+  "@appTitle": {
+    "description": "sichere Schlüsselverwaltung"
+  },
+  "searchPlaceholder": "Suche...",
+  "settings": "Einstellungen",
+  "theme": "Thema",
+  "dark": "Dunkle",
+  "light": "Licht",
+  "system": "System",
+  "clipboardCopied": "Kopiert in die Zwischenablage",
+  "addAccount": "Konto hinzufügen",
+  "add": "Anlagen",
+  "cancel": "Abbrechen"
+}

@@ -1,0 +1,17 @@
+{
+  "@@locale": "it",
+  "appTitle": "codeward",
+  "@appTitle": {
+    "description": "gestione sicura delle chiavi"
+  },
+  "searchPlaceholder": "Ricerca...",
+  "settings": "Impostazioni",
+  "theme": "Tema",
+  "dark": "Scuro",
+  "light": "Luce",
+  "system": "Sistema",
+  "clipboardCopied": "Copied to clipboard",
+  "addAccount": "Aggiungi account",
+  "add": "Aggiungi",
+  "cancel": "Annullamento"
+}
