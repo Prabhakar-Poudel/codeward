@@ -1,17 +1,18 @@
 {
   "@@locale": "ru",
-  "appTitle": "codeward",
   "@appTitle": {
     "description": "безопасное управление ключами"
   },
-  "searchPlaceholder": "Поиск...",
-  "settings": "Настройки",
-  "theme": "Тема",
+  "add": "Добавить",
+  "addAccount": "Добавить аккаунт",
+  "appearance": "Внешний вид",
+  "appTitle": "codeward",
+  "cancel": "Отмена",
+  "clipboardCopied": "Скопировано в буфер обмена",
   "dark": "Темнота",
   "light": "Свет",
+  "searchPlaceholder": "Поиск...",
+  "settings": "Настройки",
   "system": "Система",
-  "clipboardCopied": "Скопировано в буфер обмена",
-  "addAccount": "Добавить аккаунт",
-  "add": "Добавить",
-  "cancel": "Отмена"
+  "theme": "Тема"
 }

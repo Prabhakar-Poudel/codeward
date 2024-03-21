@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'settings_service.dart';
+import 'appearance_service.dart';
 
-class SettingsController with ChangeNotifier {
-  SettingsController(this._settingsService);
-
-  final SettingsService _settingsService;
+class AppearanceController with ChangeNotifier {
+  final AppearanceService _appearanceService = AppearanceService();
 
   late ThemeMode _themeMode;
   late Locale _locale;
@@ -13,9 +11,9 @@ class SettingsController with ChangeNotifier {
   ThemeMode get themeMode => _themeMode;
   Locale get locale => _locale;
 
-  Future<void> loadSettings() async {
-    _themeMode = await _settingsService.themeMode();
-    _locale = await _settingsService.appLocale();
+  Future<void> init() async {
+    _themeMode = await _appearanceService.themeMode();
+    _locale = await _appearanceService.appLocale();
 
     notifyListeners();
   }
@@ -29,7 +27,7 @@ class SettingsController with ChangeNotifier {
 
     notifyListeners();
 
-    await _settingsService.updateThemeMode(newThemeMode);
+    await _appearanceService.updateThemeMode(newThemeMode);
   }
 
   Future<void> updateLocale(Locale? newLocale) async {
@@ -41,6 +39,6 @@ class SettingsController with ChangeNotifier {
 
     notifyListeners();
 
-    await _settingsService.setAppLocale(newLocale);
+    await _appearanceService.setAppLocale(newLocale);
   }
 }

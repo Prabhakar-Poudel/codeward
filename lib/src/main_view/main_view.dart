@@ -20,15 +20,16 @@ class _MainViewState extends State<MainView> {
   late Account selectedAccount;
 
   final List<Account> accounts = [
-    Account('foo.bar.baz@email.com', 'GitHub', 0xed07, '123456'),
-    Account('foo.bar.baz@email.com', 'vsc', 0xeee9, '123456'),
-    Account('foo.bar.baz@email.com', 'Jetbrains', 0xedfd, '123456'),
-    Account('foo.bar.baz@email.com', 'Something', 123456789, '123456'),
-    Account('foo.bar.baz@email.com', 'Other thing', 123456789, '123456'),
-    Account('foo.bar.baz@emaßil.com', 'Twitter', 0xf22f, '123456'),
-    Account('foo.bar.baz@email.com', 'Facebook', 0xec93, '123456'),
-    Account('foo.bar.baz@email.com', 'Google', 0xed26, '123456'),
-    Account('foo.bar.baz@email.com', 'Amazon', 0xea59, '123456'),
+    Account('foo.bar.baz@email.com', 'GitHub', '123456'),
+    Account('foo.bar.baz@email.com', 'VisualStudioCode', '123456'),
+    Account('foo.bar.baz@email.com', 'Jetbrains', '123456'),
+    Account('foo.bar.baz@email.com', 'Something', '123456'),
+    Account('foo.bar.baz@email.com', 'Other thing', '123456'),
+    Account('foo.bar.baz@email.com', '', '123456'),
+    Account('foo.bar.baz@email.com', 'Twitter', '123456'),
+    Account('foo.bar.baz@email.com', 'Facebook', '123456'),
+    Account('foo.bar.baz@email.com', 'Google', '123456'),
+    Account('foo.bar.baz@email.com', 'Amazon', '123456'),
   ];
 
   _MainViewState() {
@@ -44,7 +45,7 @@ class _MainViewState extends State<MainView> {
   }
 
   onAddAccount(String accountName, String issuer) {
-    Account account = Account(accountName, issuer, 0xf059, '123456');
+    Account account = Account(accountName, issuer, '123456');
     accounts.add(account);
     setState(() {
       selectedAccount = account;

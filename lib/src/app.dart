@@ -3,21 +3,20 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'main_view/main_view.dart';
-import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
+import 'settings/appearance/appearance_view.dart';
+import 'settings/appearance/appearance_controller.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({
-    super.key,
-    required this.settingsController,
-  });
+  MyApp({Key? key});
 
-  final SettingsController settingsController;
+  final AppearanceController appearanceController = AppearanceController();
 
   @override
   Widget build(BuildContext context) {
+    appearanceController.init();
     return ListenableBuilder(
-      listenable: settingsController,
+      listenable: appearanceController,
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
           restorationScopeId: 'app',
@@ -33,25 +32,18 @@ class MyApp extends StatelessWidget {
             Locale('it'),
             Locale('ru'),
           ],
-          locale: settingsController.locale,
+          locale: appearanceController.locale,
           onGenerateTitle: (BuildContext context) =>
               AppLocalizations.of(context)!.appTitle,
           theme: ThemeData(),
           darkTheme: ThemeData.dark(),
-          themeMode: settingsController.themeMode,
-          onGenerateRoute: (RouteSettings routeSettings) {
-            return MaterialPageRoute<void>(
-              settings: routeSettings,
-              builder: (BuildContext context) {
-                switch (routeSettings.name) {
-                  case SettingsView.routeName:
-                    return SettingsView(controller: settingsController);
-                  case MainView.routeName:
-                  default:
-                    return MainView();
-                }
-              },
-            );
+          themeMode: appearanceController.themeMode,
+          initialRoute: '/',
+          routes: {
+            MainView.routeName: (context) => MainView(),
+            SettingsView.routeName: (context) => SettingsView(),
+            AppearanceView.routeName: (context) =>
+                AppearanceView(controller: appearanceController),
           },
         );
       },
