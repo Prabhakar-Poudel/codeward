@@ -54,14 +54,14 @@ class AppBarView extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: const Icon(Icons.settings),
           onPressed: () {
-            Navigator.restorablePushNamed(context, SettingsView.routeName);
+            Navigator.pushNamed(context, SettingsView.routeName);
           },
           iconSize: 30.0,
         ),
         IconButton(
           icon: const Icon(Icons.more_vert),
           onPressed: () {
-            Navigator.restorablePushNamed(context, SettingsView.routeName);
+            Navigator.pushNamed(context, SettingsView.routeName);
           },
           iconSize: 30.0,
         ),

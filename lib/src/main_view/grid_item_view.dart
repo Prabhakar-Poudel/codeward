@@ -21,7 +21,7 @@ class GridItemView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          buildIcon(codePoint: account.logoCodePoint, size: 24),
+          buildIcon(issuer: account.issuer, size: 24),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
             child: Text(

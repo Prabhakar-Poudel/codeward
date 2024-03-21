@@ -26,7 +26,7 @@ class SelectedAccountView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          buildIcon(codePoint: account.logoCodePoint, size: 64),
+          buildIcon(issuer: account.issuer, size: 64),
           Text(
             account.issuer,
             style: TextStyle(

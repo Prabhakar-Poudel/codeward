@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:simple_icons/simple_icons.dart';
 
-Icon buildIcon({required int codePoint, required double size}) {
-  if (codePoint == 123456789) {
-    return Icon(
-      Icons.question_mark,
-      size: size,
-    );
-  }
+Icon buildIcon({required String issuer, required double size}) {
+  final iconData =
+      SimpleIcons.values[issuer.toLowerCase()] ?? Icons.question_mark;
+
   return Icon(
-    IconData(
-      codePoint,
-      fontFamily: 'SimpleIcons',
-      fontPackage: 'simple_icons',
-    ),
+    iconData,
     size: size,
   );
 }
